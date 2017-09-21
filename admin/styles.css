@@ -1,0 +1,153 @@
+/*yeee, its comment*/
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+}
+
+a {
+	text-decoration: underline;
+	color: #1aa8af;
+}
+
+.wrapBig {
+	height: 100%;
+	color: #6a4848;
+}
+
+.wrap {
+	padding: 0 0 210px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.header {
+	position: relative;
+	height: 338px;
+	z-index: 4;
+}
+
+.useful {
+	position: absolute;
+	left: 50px;
+	top: 130px;
+}
+	
+.logo {
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	display: block;
+	background: url(test.png) no-repeat 0 0;
+	width: 400px;
+	height: 150px;
+	overflow: hidden;
+	text-indent: -10000px;
+}
+
+.header nav {
+	position: absolute;
+	top: 20px;
+	left: 650px;
+	font: 12px/18px Arial;
+	width: 150px;
+	display: block;
+}
+
+.time_work {
+	position: absolute;
+	top: 20px;
+	left: 470px;
+	width: 150px;
+	font: 12px/18px Arial;
+	color: #000 !important;
+}
+
+.header nav li {
+	float: left;
+	width: 120px;
+	margin-bottom: 2px;
+	line-height: 16px;
+}
+
+.contacts {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 208px;
+	font: 14px/20px Arial;
+	color: #000;
+	z-index: 100;
+}
+
+ul.contacts li {
+	padding: 0 0 0 24px;
+	margin-bottom: 1px;
+}
+
+.header ul.contacts li span {
+	font: bold 16px/20px Arial;
+}
+
+.velcom {
+	background: url(velcom.png) no-repeat 0 50%;
+}
+
+.call.links a {
+	color: #c4d62a;
+	text-decoration: none;
+	border-bottom: 1px dotted #c4d62a;
+}
+
+ul.contacts li.call {
+	padding: 0;
+	font-size: 13px;
+}
+
+ul.contacts li.skype {
+	background: url(skype.png) no-repeat 0 50%;
+	padding-left: 32px;
+	color: #c4d62a;
+}
+
+ul.contacts li.email {
+	background: url(mail.png) no-repeat 0 50%;
+	padding-left: 32px;
+	color: #c4d62a;
+}
+#object1 {
+		position:absolute;
+	top:250px;
+	left:0px;
+background :lightgreen;
+border-style:solid;
+border-width:1px;
+font-family :times new roman;
+font-size :20px;
+width :200px;
+height :300px;
+padding :10px;
+margin :10px 20px 10px 10px; 
+}
+
+#object2 {
+	position:relative;
+	top:250px;
+	left:200px;
+background :lightblue;
+border-style:solid;
+border-width:1px;
+font-family :times new roman;
+font-size :20px;
+width :200px;
+height :1000px;
+padding :20px;
+margin :0px 20px 10px 40px; 
+}
+#welcome { font-style:italic; color:blue; }
+.players { font-style:italic; color:blue; }

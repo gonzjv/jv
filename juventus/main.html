@@ -1,0 +1,40 @@
+<?php include_once 'FC_sum_2.php';
+include_once 'FC_html_text.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>players</title>
+</head>
+<body>
+<p><a href="?addplayer">click here to add player</a></p>
+<p><a href="?conteplayers">click here to sort players with
+Conte</a></p>
+<p>players in list:</p>
+<?php foreach ($players as $player): ?>
+<form action="?delplayer" method="post">
+<blockquote>
+<p>
+<?php 
+htmlout($player['2name']);
+?>
+ (author <a href="mailto:
+<?php
+htmlout($player['email']);
+ ?>">
+ <?php
+htmlout($player['name']);
+ ?></a>)
+<input type="hidden" name="id" value="<?php
+echo $player['id']; ?>">
+<input type="submit" value="Удалить">
+</p>
+</blockquote>
+</form>
+<?php endforeach; 
+$sum_staff=sum_2($sum_player[0],$sum_coach[0]);
+htmlout("Amount of staff: $sum_staff");
+include_once 'footer_inc.html'; ?>
+</body>
+</html>

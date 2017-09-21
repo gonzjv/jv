@@ -1,0 +1,32 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/FC_html_text.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Coaches</title>
+</head>
+  <body>
+<h1>Coach control</h1>
+<p><a href="?add">Add new coach</a></p>
+<ul>
+<?php foreach ($coaches as $coach): ?>
+<form action="" method="post">
+<li>
+<div>
+<?php htmlout($coach['name']); htmlout (' ');
+htmlout ($coach['sec_name']);?>
+<input type="hidden" name="id" 
+value="<?php echo $coach['id'];?>">
+<input type="submit" name="action" value="Edit">
+<input type="submit" name="action" value="Delete">
+</div>
+</form>
+</li>
+<?php endforeach; ?>
+</ul>
+    <p><a href="..">Return to JMS home</a></p>
+	<?php include '../logout.inc.html.php'; ?>
+ </body>
+</html>
