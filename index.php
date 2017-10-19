@@ -52,7 +52,7 @@ if (isset($_GET['cart'])) {
 include 'catalog.html.php';
 
 if (userIsLoggedIn()) {
-    echo 'Hi, lucky one';
+    echo " Hi, " . $_SESSION['username'];
     include './logout.inc.html.php';
 } else {
     include './login.html.php';
