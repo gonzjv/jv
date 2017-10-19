@@ -53,7 +53,7 @@ include 'catalog.html.php';
 
 if (userIsLoggedIn()) {
     echo 'Hi, lucky one';
-    
+    include './logout.inc.html.php';
 } else {
     include './login.html.php';
     exit();
