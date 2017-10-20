@@ -1,5 +1,5 @@
 <?php
-
+//session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] .
         '/includes/magicquotes.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
@@ -51,11 +51,4 @@ if (isset($_GET['cart'])) {
 
 include 'catalog.html.php';
 
-if (userIsLoggedIn()) {
-    echo " Hi, " . $_SESSION['username'];
-    include './logout.inc.html.php';
-} else {
-    include './login.html.php';
-    exit();
-}
-?>
+
