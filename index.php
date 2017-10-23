@@ -1,5 +1,4 @@
 <?php
-//session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] .
         '/includes/magicquotes.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
@@ -14,6 +13,7 @@ $items = array(
     array('id' => '4', 'desc' => 'Simply JavaScript (SitePoint)',
         'price' => 39.95));
 
+session_start();
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
