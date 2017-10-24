@@ -20,7 +20,7 @@
     <table>
       <thead>
         <tr>
-          <th>Item Description</th>
+          <th>Item </th>
           <th>Price</th>
         </tr>
       </thead>
@@ -33,7 +33,7 @@
       <tbody>
         <?php foreach ($cart as $item): ?>
           <tr>
-            <td><?php htmlout($item['desc']); ?></td>
+            <td><?php htmlout($item['name']); ?></td>
             <td>
               $<?php echo number_format($item['price'], 2); ?>
             </td>
