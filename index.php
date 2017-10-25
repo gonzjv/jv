@@ -4,16 +4,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
         '/includes/magicquotes.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
-//$items = array(
-//    array('id' => '1', 'desc' => 'Canadian-Australian Dictionary',
-//        'price' => 24.95),
-//    array('id' => '2', 'desc' => 'As-new parachute (never opened)',
-//        'price' => 1000),
-//    array('id' => '3', 'desc' => 'Songs of the Goldfish (2CD set)',
-//        'price' => 19.99),
-//    array('id' => '4', 'desc' => 'Simply JavaScript (SitePoint)',
-//        'price' => 39.95));
-//        
 // Display games list
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 try {
