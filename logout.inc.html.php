@@ -2,6 +2,6 @@
   <div>
     <input type="hidden" name="action" value="logout">
     <input type="hidden" name="goto" value="./">
-    <input type="submit" value="Log out">
+    <button type="submit" class="btn btn-secondary btn-sm">Log Out</button>
   </div>
 </form>
