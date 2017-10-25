@@ -44,30 +44,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-                    <!--                <table border="1">
-                                        <thead>
-                                            <tr>
-                                                <th>Item Description</th>
-                                                <th>Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td>
-                                                            
-                                                        </td>
-                                                        <td>
-                                                            <form action="" method="post">
-                                                                <div>
-                                                                    <input type="hidden" name="id" value="<?php htmlout($item['id']); ?>">
-                                                                    <input type="submit" name="action" value="Buy">
-                                                                </div>
-                                                            </form>
-                                                        </td>
-                                                    </tr>
-                                </tbody>
-                            </table>-->
                     <p>All prices are in imaginary dollars.</p>
                 </div>
 
