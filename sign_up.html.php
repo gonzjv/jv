@@ -13,15 +13,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
               <link rel="stylesheet" href="./css/custom.css"
     </head>
     <body>
-        <form action="" method="post" class="container">
+        <form action="index.php" method="post" class="container">
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="first_name">First name</label>
-                    <input type="text" class="form-control" id="first_name" placeholder="First name" value="Tirion" required>
+                    <input type="text" class="form-control" name="first_name"  id="first_name" placeholder="First name" value="Tirion" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="last_name">Last name</label>
-                    <input type="text" class="form-control" id="last_name" placeholder="Last name" value="Lannister" required>
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name" value="Lannister" required>
                 </div>
             </div>
             <div class="row">
@@ -32,15 +32,17 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="phone">Phone number</label>
-                    <input type="text" class="form-control" id="phone" placeholder="+375331112233" required>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="+375331112233" required>
                     <div class="invalid-feedback">
                         Please provide a valid phone number.
                     </div>
                 </div>
             </div>
-            <input type="hidden" name="action" value="sign_up">
-            <input type="hidden" name="goto" value="./">
-            <button class="btn btn-primary btn-sm" type="submit">Submit</button>
+            <div>
+                <input type="hidden" name="action" value="sign_up">
+                <input type="hidden" name="goto" value="./">
+                <button type="submit" class="btn btn-primary btn-sm" >Submit</button>
+            </div>
         </form>
     </body>
 </html>

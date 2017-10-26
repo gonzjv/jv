@@ -21,6 +21,6 @@
     <div>
         <input type="hidden" name="action" value="login">
         <button type="submit" class="btn btn-primary btn-sm">Log In</button>
-        <a class="float-right" href="./sign_up.html.php">Sign Up</a>
+        <a class="float-right" href="?sign_up">Sign Up</a>
     </div>
 </form>

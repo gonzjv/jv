@@ -50,7 +50,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 <div class="col">
                     <?php
                     if (userIsLoggedIn()) {
-                        echo " Hi, " . $_SESSION['username'];
+                        echo " Hi, " . $_SESSION['first_name'];
                         include './logout.inc.html.php';
                     } else {
                         include './login.html.php';

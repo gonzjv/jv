@@ -54,6 +54,11 @@ if (isset($_GET['cart'])) {
     exit();
 }
 
+if (isset($_GET['sign_up'])) {
+    include 'sign_up.html.php';
+    exit();
+}
+
 include 'catalog.html.php';
 
 
