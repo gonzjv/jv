@@ -17,11 +17,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="first_name">First name</label>
-                    <input type="text" class="form-control" name="first_name"  id="first_name" placeholder="First name" value="Tirion" required>
+                    <input type="text" class="form-control" name="first_name"  id="first_name" placeholder="Aleksey" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="last_name">Last name</label>
-                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name" value="Lannister" required>
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Ogurcov" required>
                 </div>
             </div>
             <div class="row">
