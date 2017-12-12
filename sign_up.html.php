@@ -41,19 +41,19 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="pass">Password</label>
-                    <input type="password" class="form-control" name="pass" id="pass" >
+                    <input type="text" class="form-control" name="pass" id="pass" >
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="pass_confirm">Password</label>
-                    <input type="password" class="form-control" name="pass_confirm" id="pass_confirm" >
+                    <label for="passConfirm">Confirm password </label>
+                    <input type="text" class="form-control" name="passConfirm" id="pass_confirm" >
                 </div>
             </div>
-            <?php if (isset($sign_up_error)): ?>
-                <p><?php htmlout($sign_up_error); ?></p>
+            <?php if ($signUpError): ?>
+                <p><?php htmlout($signUpError); ?></p>
             <?php endif; ?>
             <div>
                 <input type="hidden" name="action" value="sign_up">
-                <input type="hidden" name="goto" value="./">
+                <!--<input type="hidden" name="goto" value="./sign_up.html.php">-->
                 <button type="submit" class="btn btn-primary btn-sm" >Submit</button>
             </div>
         </form>
