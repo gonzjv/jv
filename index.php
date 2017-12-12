@@ -54,8 +54,14 @@ if (isset($_GET['cart'])) {
     exit();
 }
 
-if (isset($_GET['sign_up']) or isset($sign_up_error)) {
-    include 'sign_up.html.php';
+if (isset($_GET['sign_up'])) {
+    include 'sign_up.html.php'; 
+    exit();
+}
+
+if (!pass_ok()) {
+    // Empty the $_SESSION['cart'] array
+    include 'sign_up.html.php'; 
     exit();
 }
 
