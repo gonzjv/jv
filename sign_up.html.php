@@ -48,7 +48,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     <input type="text" class="form-control" name="passConfirm" id="pass_confirm" >
                 </div>
             </div>
-            <?php if ($signUpError): ?>
+            <?php if (isset ($signUpError)): ?>
                 <p><?php htmlout($signUpError); ?></p>
             <?php endif; ?>
             <div>
