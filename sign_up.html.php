@@ -40,8 +40,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="pass">Password</label>
-                    <input type="text" class="form-control" name="pass" id="pass" >
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" name="password" id="password" >
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="passConfirm">Confirm password </label>
@@ -53,7 +53,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
             <?php endif; ?>
             <div>
                 <input type="hidden" name="action" value="sign_up">
-                <!--<input type="hidden" name="goto" value="./sign_up.html.php">-->
                 <button type="submit" class="btn btn-primary btn-sm" >Submit</button>
             </div>
         </form>
