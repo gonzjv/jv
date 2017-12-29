@@ -63,7 +63,8 @@ if (!pass_ok()) {
     // Empty the $_SESSION['cart'] array
     include 'sign_up.html.php'; 
     exit();
-}
+} 
+else{ echo' pass ok';}
 
 include 'catalog.html.php';
 
