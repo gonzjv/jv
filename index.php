@@ -64,8 +64,7 @@ if (!pass_ok()) {
     include 'sign_up.html.php'; 
     exit();
 } 
-else{ echo' pass ok';}
 
-include 'catalog.html.php';
+include 'home.html.php';
 
 

@@ -14,6 +14,21 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
     </head>
     <body>
         <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo_car.png" width="200" height="57" alt="">
+                </a>
+            </nav>
+            <?php if (sign_up()): ?>
+                <div class="alert alert-success" role="alert">
+                    Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
+                </div>
+            <?php endif; ?>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Главная</li>
+                </ol>
+            </nav>
             <div class="row">
                 <div class="col">
                     <p>Your shopping cart contains <?php echo count($_SESSION['cart']); ?> items.</p>
