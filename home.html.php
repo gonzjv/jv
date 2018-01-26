@@ -75,23 +75,22 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                         Понятие включает легковой автомобиль, грузовой автомобиль, автобус, троллейбус, бронетранспортёр, но не включает сельскохозяйственный трактор и мотоцикл.</p>
                 </div>
 
-                <div class="col">
+                <div class="col-3">
                     <?php
                     if (userIsLoggedIn()) {
                         echo " Hi, " . $_SESSION['first_name'];
                         include './logout.inc.html.php';
                     } else {
                         include './login.html.php';
-                        exit();
                     }
                     ?>
                 </div>
             </div>
-            <!--            <div class="row">
-                            <div class="col">
-                                asd
-                            </div>
-                        </div>-->
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+            </div>
         </div>
 
     </body>

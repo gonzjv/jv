@@ -65,6 +65,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
 
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-success" role="alert">
+                        Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
+                    </div>
+                </div>
+            </div>
         </div>
 
     </body>
