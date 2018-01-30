@@ -1,6 +1,6 @@
 .wrap .wrap-lg {
   position: relative;
-  min-height: 224px;
+  min-height: 843px;
   width: 1264px;
   background-image: url(../img/wrap_1264.jpg); }
 .wrap .wrap-md {
@@ -18,12 +18,5 @@
   .wrap .wrap-xs .sitename {
     padding-left: 40px;
     text-align: left; }
-
-.breadcrumb {
-  padding: .75rem 1rem;
-  margin-bottom: 1rem;
-  list-style: none;
-  /*background-color: #e9ecef;*/
-  border-radius: .25rem; }
 
 /*# sourceMappingURL=custom.css.map */

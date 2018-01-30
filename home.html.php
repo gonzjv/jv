@@ -8,7 +8,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
         <title>Product Catalog</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="./css/bootstrap.min_modified.css">
+        <link rel="stylesheet" href="./css/bootstrap.min_mod.css">
         <link rel="stylesheet" href="./css/custom.css">
 <!--        <script type="text/javascript" src="/templates/jv/js/bootstrap.min.js">
         </script>-->
@@ -25,10 +25,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
+                            <div class="navbar-nav text-light lead">
                                 <a class="nav-item nav-link" href="./news.html.php">Новости</a>
                                 <a class="nav-item nav-link" href="#">Цены</a>
-                                <a class="nav-item nav-link disabled" href="#">всяка</a>
+                                <a class="nav-item nav-link" href="#">Отзывы</a>
+                                <a class="nav-item nav-link" href="#">Галерея</a>
                             </div>
                         </div>
                     </nav>
@@ -44,7 +45,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </nav>
                     <div class="row">
                         <div class="col">
-
+                            <div class="lead text-light">
+                                <p>Ремонтируем с 1998 года.</p>
+                                <p>Около 6000 замененных деталей подвески.</p>
+                                <p>На 150 и более моделей автомобилей</p>
+                            </div>
                         </div>
 
                         <div class="col-3">
@@ -60,7 +65,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Your shopping cart contains <?php echo count($_SESSION['cart']); ?> items.</p>
+<!--                            <p>Your shopping cart contains <?php echo count($_SESSION['cart']); ?> items.</p>
                             <p><a href="?cart">View your cart</a></p>
                             <table class="table table-bordered">
                                 <thead>
@@ -89,7 +94,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                                 </tbody>
                             </table>
                             <p>All prices are in imaginary dollars.</p>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
