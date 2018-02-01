@@ -9,7 +9,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="./css/bootstrap.min_mod.css"
+        <link rel="stylesheet" href="./css/bootstrap.min.css"
               <link rel="stylesheet" href="./css/custom.css"
     </head>
     <body>
@@ -18,23 +18,18 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 <a class="navbar-brand" href="./index.php">
                     <img src="./img/logo_car.png" width="200" height="57" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="./news.html.php">Новости</a>
-                        <a class="nav-item nav-link" href="#">Цены</a>
-                        <a class="nav-item nav-link disabled" href="#">всяка</a>
+                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#">Features</a>
+                        <a class="nav-item nav-link" href="#">Pricing</a>
+                        <a class="nav-item nav-link disabled" href="#">Disabled</a>
                     </div>
                 </div>
             </nav>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Главная</li>
-                </ol>
-            </nav>
-
             <div class="row">
                 <div class="col">
                     Легковой автомобиль — полной массой не более 3500 кг для перевозки пассажиров (от 1 до 8, не включая водителя) и багажа. Легковые автомобили выпускаются с закрытыми кузовами (седан, лимузин, купе, хетчбэк, универсал, фургон и микроавтобус) и с кузовами, верх которых убирается (кабриолет, родстер, ландо и фаэтон).
@@ -74,5 +69,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
             </div>
         </div>
 
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+        <script src="./js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -1,9 +1,8 @@
 
 .wrap {
     .wrap-lg	{
-        position: relative;
+        /*position: relative;*/
         min-height: 843px;
-        width: 1264px;
         background-image:	url(../img/wrap_1264.jpg);
     }
     .wrap-md	{
@@ -26,4 +25,10 @@
         }
     }
 }
-    
+.breadcrumb-mod{
+    background-color: transparent;
+}    
+.url{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
