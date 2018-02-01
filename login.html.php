@@ -9,9 +9,11 @@
         <!--<label for="password"></label>-->
         <input type="password" class="form-control" name="password" id="password" placeholder="Пароль">
     </div>
+    <div class="lead text-light">
     <?php if (isset($loginError)): ?>
         <p><?php htmlout($loginError); ?></p>
     <?php endif; ?>
+    </div>
     <div>
         <input type="hidden" name="action" value="login">
         <button type="submit" class="btn btn-outline-light btn-sm">Войти</button>

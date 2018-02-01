@@ -59,6 +59,10 @@ if (isset($_GET['sign_up'])) {
     exit();
 }
 
+if (isset($_GET['news'])) {
+    include 'news.html.php'; 
+    exit();
+}
 if (!pass_ok()) {
     // Empty the $_SESSION['cart'] array
     include 'sign_up.html.php'; 

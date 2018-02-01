@@ -23,8 +23,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <div class="navbar-nav lead">
-                            <a class="nav-item nav-link active url" href="#">Главная <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link url" href="./news.html.php">Новости</a>
+                            <a class="nav-item nav-link active url" href="./index.php">Главная <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link url" href="?news">Новости</a>
                             <a class="nav-item nav-link url" href="#">Отзывы</a>
                             <a class="nav-item nav-link url" href="#">Галерея</a>
                         </div>  
