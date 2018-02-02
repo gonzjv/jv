@@ -6490,53 +6490,5 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
-@media (max-width: 575.98px) {
-  .wrap {
-    min-height: 384px;
-    background-image: url(../img/wrap_576x384.jpg); } }
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .wrap {
-    min-height: 512px;
-    background-image: url(../img/wrap_768x512.jpg); } }
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .wrap {
-    min-height: 661px;
-    background-image: url(../img/wrap_992x661.jpg); } }
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .wrap {
-    min-height: 800px;
-    background-image: url(../img/wrap_1200x800.jpg); } }
-@media (min-width: 1200px) and (max-width: 1365.9px) {
-  .wrap {
-    min-height: 911px;
-    background-image: url(../img/wrap_1366x911.jpg); } }
-@media (min-width: 1366px) {
-  .wrap {
-    min-height: 1280px;
-    background-image: url(../img/wrap_1920x1280.jpg); } }
-.wrap-md {
-  min-height: 224px;
-  width: 965px;
-  background-image: url(../img/wrap970x224.jpg); }
 
-.wrap-sm {
-  min-height: 224px;
-  width: 745px;
-  background-image: url(../img/wrap750x224.jpg); }
-
-.wrap-xs {
-  min-height: 224px;
-  width: 745px;
-  background-image: url(../img/wrap750x224.jpg); }
-  .wrap-xs .sitename {
-    padding-left: 40px;
-    text-align: left; }
-
-.breadcrumb-mod {
-  background-color: transparent; }
-
-.url {
-  text-decoration-line: underline;
-  text-decoration-style: dotted; }
-
-/*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=bootstrap.css.map */

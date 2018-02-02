@@ -13,7 +13,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
     </head>
     <body>
         <div class="wrap">
-            <div class="wrap-lg">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <a class="navbar-brand" href="./index.php">
                         <img src="./img/logo_car.png" width="200" height="57" alt="">
@@ -99,7 +98,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
