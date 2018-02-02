@@ -37,29 +37,6 @@
     }
 }
 
-.wrap-md	{
-    min-height:	224px;
-    width: 965px;
-    background-image:	url(../img/wrap970x224.jpg);
-}
-.wrap-sm	{
-    min-height:	224px;
-    width: 745px;
-    background-image:	url(../img/wrap750x224.jpg);
-}
-.wrap-xs	{
-    min-height:	224px;
-    width: 745px;
-    background-image:	url(../img/wrap750x224.jpg);
-    .sitename {
-        padding-left: 40px;
-        text-align: left;
-    }
-}
-
-.breadcrumb-mod{
-    background-color: transparent;
-}    
 .url{
     text-decoration-line: underline;
     text-decoration-style: dotted;
