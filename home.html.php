@@ -35,18 +35,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                             Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
                         </div>
                     <?php endif; ?>
-                    <!--                    <nav aria-label="breadcrumb">
-                                            <ol class="breadcrumb breadcrumb-mod">
-                                                <li class="breadcrumb-item active" aria-current="page">Главная</li>
-                                            </ol>
-                                        </nav>-->
                     <div class="row">
                         <div class="col-9">
                             <div class="lead text-light mt-5">
                                 <p>Ремонтируем с 1998 года.</p>
                                 <p>Около 6000 замененных деталей подвески</p>
                                 <p>на 150 и более моделей автомобилей</p>
-                                <input type="hidden" name="action" value="login">
+                                <input type="hidden" name="action" value="order">
                                 <button type="submit" class="btn btn-light btn-lg">Записаться...</button>
                             </div>
                         </div>
@@ -64,36 +59,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </div>
                     <div class="row">
                         <div class="col">
-    <!--                            <p>Your shopping cart contains <?php echo count($_SESSION['cart']); ?> items.</p>
-                            <p><a href="?cart">View your cart</a></p>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Desk game</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">#</th>
-                                    </tr>
-                                </thead>
-                            <?php // foreach ($items as $item): ?>
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <th scope="row"><?php // htmlout($item['id']);    ?></th>
-                                                                                        <td><?php // htmlout($item['name']);    ?></td>
-                                                                                        <td>$<?php // echo number_format($item['price'], 2);    ?></td>
-                                                                                        <td><form action="" method="post">
-                                                                                                <div>
-                                                                                                    <input type="hidden" name="id" value="<?php // htmlout($item['id']);    ?>">
-                                                                                                    <input type="submit" name="action" value="Buy">
-                                                                                                </div>
-                                                                                            </form>
-                                                                                        </td>
-                                                                                    </tr>
-                            <?php // endforeach; ?>
-                                </tbody>
-                            </table>
-                            <p>All prices are in imaginary dollars.</p>
-                        </div>-->
                         </div>
                     </div>
                 </div>
