@@ -1,9 +1,8 @@
 
 <form action="" method="post">
-    <div class="form-group lead text-dark">
+    <div class="form-group lead text-light">
         <label for="email">Вход</label>
         <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Ваш email">
-        <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
     <div class="form-group">
         <!--<label for="password"></label>-->

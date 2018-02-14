@@ -22,68 +22,67 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav lead">
-                        <a class="nav-item nav-link active url" href="./index.php">Главная <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link url" href="./index.php">Главная <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link url" href="?news">Новости</a>
                         <a class="nav-item nav-link url" href="#">Отзывы</a>
                         <a class="nav-item nav-link url" href="#">Галерея</a>
+                        <a class="nav-item nav-link url active" href="?order">Запись</a>
                     </div>  
                 </div>
             </nav>
-            <div class="container">
+            <div class="container lead">
                 <div class="row">
-                    <div class="col-9">
-                        <div class="lead text-light mt-5">
-                            <p>Your shopping cart contains <?php echo count($_SESSION['cart']); ?> items.</p>
-                            <p><a href="?cart">View your cart</a></p>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>    
-                                        <th scope="col">#</th>
-                                        <th scope="col">Desk game</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">#</th>
-                                    </tr>
-                                </thead>
-                                <?php foreach ($items as $item): ?>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row"><?php htmlout($item['id']); ?></th>
-                                            <td><?php htmlout($item['name']); ?></td>
-                                            <td>$<?php echo number_format($item['price'], 2); ?></td>
-                                            <td><form action="" method="post">
-                                                    <div>
-                                                        <input type="hidden" name="id" value="<?php htmlout($item['id']); ?>">
-                                                        <input type="submit" name="action" value="Buy">
-                                                    </div>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                            <p>All prices are in imaginary dollars.</p>
-                        </div>
+                    <div class="col-9 mt-5">
+                        <form action="" method="post">
+                            <div class="form-row text-light">
+                                <div class="form-group col-md-4">
+                                    <label for="orderDate">Выберите дату:</label>
+                                    <select class="form-control" id="orderDate">
+                                        <?php foreach ($calendar as $day): ?>
+                                            <option class="text-success"><?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    <!--<div class="text-info">*</div>-->
+                                    <small>
+                                        <strong>
+                                            <div class="text-success">* Свободный день</div>
+                                            <div class="text-warning">* Частично свободный день</div>
+                                            <div class="text-danger"> * Расписанный день</div>
+                                        </strong>
+                                    </small>
+                                </div>
+                                <div class="form-group col-md-3 ml-5">
+                                    <label for="lastName">Данные для записи:</label>
+                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Фамилия">
+                                    <label for="firstName"></label>
+                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Имя">
+                                    <label for="vehicle"></label>
+                                    <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Автомобиль">
+                                </div>
+                            </div>
+                            <input type="hidden" name="action" value="insertOrder">
+                            <button type="submit" class="btn btn-outline-light btn-sm">Записаться</button>
+                        </form>
                     </div>
-                </div>
-
-                <div class="col-3">
-                    <?php
-                    if (userIsLoggedIn()) {
-                        echo " Hi, " . $_SESSION['first_name'];
-                        include './logout.inc.html.php';
-                    } else {
-                        include './login.html.php';
-                    }
-                    ?>
+                    <div class="col-3">
+                        <?php
+                        if (userIsLoggedIn()) {
+                            echo " Hi, " . $_SESSION['first_name'];
+                            include './logout.inc.html.php';
+                        } else {
+                            include './login.html.php';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./js/jquery-3.3.1.slim.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
-    <script src="./js/bootstrap.min.js"></script>
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+        <script src="./js/bootstrap.min.js"></script>
+    </body>
 </html>

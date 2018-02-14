@@ -13,56 +13,56 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
     </head>
     <body>
         <div class="wrap">
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="./index.php">
-                        <img src="./img/logo_car.png" width="200" height="57" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="navbar-nav lead">
-                            <a class="nav-item nav-link active url" href="./index.php">Главная <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link url" href="?news">Новости</a>
-                            <a class="nav-item nav-link url" href="#">Отзывы</a>
-                            <a class="nav-item nav-link url" href="#">Галерея</a>
-                        </div>  
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="./index.php">
+                    <img src="./img/logo_car.png" width="200" height="57" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav lead">
+                        <a class="nav-item nav-link active url" href="./index.php">Главная <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link url" href="?news">Новости</a>
+                        <a class="nav-item nav-link url" href="#">Отзывы</a>
+                        <a class="nav-item nav-link url" href="#">Галерея</a>
+                        <a class="nav-item nav-link url" href="?order">Запись</a>
+                        <a class="nav-item nav-link url" href="?shop">Магазин</a>
+                    </div>  
+                </div>
+            </nav>
+            <div class="container">
+                <?php if (sign_up()): ?>
+                    <div class="alert alert-success" role="alert">
+                        Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
                     </div>
-                </nav>
-                <div class="container">
-                    <?php if (sign_up()): ?>
-                        <div class="alert alert-success" role="alert">
-                            Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
-                        </div>
-                    <?php endif; ?>
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="lead text-light mt-5">
-                                <p>Ремонтируем с 1998 года.</p>
-                                <p>Около 6000 замененных деталей подвески</p>
-                                <p>на 150 и более моделей автомобилей</p>
+                <?php endif; ?>
+                <div class="row">
+                    <div class="col-9">
+                        <div class="lead text-light mt-5">
+                            <p>Ремонтируем с 1998 года.</p>
+                            <p>Около 6000 замененных деталей подвески</p>
+                            <p>на 150 и более моделей автомобилей</p>
+                            <form action="" method="post">
                                 <input type="hidden" name="action" value="order">
                                 <button type="submit" class="btn btn-light btn-lg">Записаться...</button>
-                            </div>
-                        </div>
-
-                        <div class="col-3">
-                            <?php
-                            if (userIsLoggedIn()) {
-                                echo " Hi, " . $_SESSION['first_name'];
-                                include './logout.inc.html.php';
-                            } else {
-                                include './login.html.php';
-                            }
-                            ?>
+                            </form>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                        </div>
+
+                    <div class="col-3">
+                        <?php
+                        if (userIsLoggedIn()) {
+                            echo " Hi, " . $_SESSION['first_name'];
+                            include './logout.inc.html.php';
+                        } else {
+                            include './login.html.php';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
+        </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

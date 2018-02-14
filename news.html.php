@@ -27,6 +27,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                             <a class="nav-item nav-link active url" href="#">Новости</a>
                             <a class="nav-item nav-link url" href="#">Отзывы</a>
                             <a class="nav-item nav-link url" href="#">Галерея</a>
+                            <a class="nav-item nav-link url" href="?order">Запись</a>
                         </div>  
                     </div>
                 </nav>
