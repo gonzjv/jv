@@ -31,15 +31,20 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </div>  
                 </div>
             </nav>
-            <div class="container">
+            <div class="container lead">
                 <?php if (sign_up()): ?>
                     <div class="alert alert-success" role="alert">
                         Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
                     </div>
                 <?php endif; ?>
+                <?php if ($_SESSION['orderIsDone'] == true): ?>
+                    <div class="alert alert-success" role="alert">
+                        Поздравляем! Запись оформлена. Ждем Вас,  <?php htmlout($_SESSION['firstName'] . ', на ' . $_SESSION['vehicle'] . ' ' . $_SESSION['date']); ?>
+                    </div>
+                <?php endif; ?>
                 <div class="row">
                     <div class="col-9">
-                        <div class="lead text-light mt-5">
+                        <div class="text-light mt-5">
                             <p>Ремонтируем с 1998 года.</p>
                             <p>Около 6000 замененных деталей подвески</p>
                             <p>на 150 и более моделей автомобилей</p>

@@ -30,9 +30,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                 </div>
             </nav>
             <div class="container lead">
-                <?php if (orderIsDone()): ?>
+                <?php if ($_SESSION['orderIsDone'] == true): ?>
                     <div class="alert alert-success" role="alert">
-                        Запись  успешно завершена. Ждем Вас,  <?php htmlout($_POST['firstName'] . ', на ' . $_POST['vehicle'] . ' ' . $_POST['date']);?>
+                        Поздравляем! Запись оформлена. Ждем Вас,  <?php htmlout($_SESSION['firstName'] . ', на ' . $_SESSION['vehicle'] . ' ' . $_SESSION['date']); ?>
                     </div>
                 <?php endif; ?>
                 <div class="row">
@@ -43,7 +43,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                     <label for="orderDate">Выберите дату:</label>
                                     <select class="form-control" id="date" name="date">
                                         <?php foreach ($calendar as $day): ?>
-                                        <option class="text-success" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>"><?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
+                                            <option class="text-success" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>"><?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
                                             </option>
                                         <?php endforeach; ?>
                                     </select>
