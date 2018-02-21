@@ -3,11 +3,14 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/magicquotes.inc.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
-include './cart.php';
+
+session_start();
 if (isset($_POST['action']) and $_POST['action'] == 'order' or
         isset($_GET['order'])) {
     include './order.php';
-    exit;
+}
+if (isset($_POST['action']) and $_POST['action'] == 'addOrder') {
+    include './addOrder.php';
 }
 if (isset($_GET['sign_up'])) {
     include 'sign_up.html.php';
@@ -23,10 +26,9 @@ if (isset($_GET['news'])) {
     exit();
 }
 if (isset($_GET['shop'])) {
+    include './cart.php';
     include './deskGames.html.php';
     exit();
 }
 
 include 'home.html.php';
-
-

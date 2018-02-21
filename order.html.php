@@ -37,13 +37,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                 <?php endif; ?>
                 <div class="row">
                     <div class="col-9 mt-5">
-                        <form action="" method="post">
+                        <form action="./index.php" method="post">
                             <div class="form-row text-light">
                                 <div class="form-group col-md-4">
                                     <label for="orderDate">Выберите дату:</label>
                                     <select class="form-control" id="date" name="date">
                                         <?php foreach ($calendar as $day): ?>
-                                            <option class="text-success" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>"><?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
+                                            <option class="text-success" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>">
+                                                <?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
                                             </option>
                                         <?php endforeach; ?>
                                     </select>
@@ -64,7 +65,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                     <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Автомобиль">
                                 </div>
                             </div>
-                            <input type="hidden" name="action" value="insertOrder">
+                            <input type="hidden" name="action" value="addOrder">
                             <button type="submit" class="btn btn-outline-light btn-sm">Записаться</button>
                         </form>
                     </div>
