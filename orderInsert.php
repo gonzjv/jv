@@ -1,16 +1,23 @@
 <?php
 
+$today = getdate();
+$nowDate=$today['year'] . ':' . $today['mon'] . ':' . $today['mday'];
+$nowTime=$today['hours'] . ':' . $today['minutes'] . ':' . $today['seconds'];
 try {
     $sql = 'INSERT INTO orders SET 
             lastName= :lastName,
             firstName= :firstName,
             vehicle=:vehicle,
-            date=:date';
+            date=:date,
+            insertDate=:insertDate,
+            insertTime=:insertTime';
     $s = $pdo->prepare($sql);
     $s->bindValue(':lastName', $_POST['lastName']);
     $s->bindValue(':firstName', $_POST['firstName']);
     $s->bindValue(':vehicle', $_POST['vehicle']);
     $s->bindValue(':date', $_POST['date']);
+    $s->bindValue(':insertDate', $nowDate);
+    $s->bindValue(':insertTime', $nowTime);
     $s->execute();
 } catch (PDOException $e) {
     $error = 'Ошибка при записи заказа в БД.';

@@ -65,7 +65,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                     <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Автомобиль">
                                 </div>
                             </div>
-                            <input type="hidden" name="action" value="addOrder">
+                            <input type="hidden" name="action" value="orderInsert">
                             <button type="submit" class="btn btn-outline-light btn-sm">Записаться</button>
                         </form>
                     </div>

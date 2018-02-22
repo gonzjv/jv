@@ -9,8 +9,8 @@ if (isset($_POST['action']) and $_POST['action'] == 'order' or
         isset($_GET['order'])) {
     include './order.php';
 }
-if (isset($_POST['action']) and $_POST['action'] == 'addOrder') {
-    include './addOrder.php';
+if (isset($_POST['action']) and $_POST['action'] == 'orderInsert') {
+    include './orderInsert.php';
 }
 if (isset($_GET['sign_up'])) {
     include 'sign_up.html.php';
