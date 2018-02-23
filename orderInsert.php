@@ -1,8 +1,10 @@
 <?php
 
 $today = getdate();
-$nowDate=$today['year'] . ':' . $today['mon'] . ':' . $today['mday'];
+$nowDate=$today['year'] . '-' . $today['mon'] . '-' . $today['mday'];
 $nowTime=$today['hours'] . ':' . $today['minutes'] . ':' . $today['seconds'];
+//$nowDateTime=$today['year'] . '-' . $today['mon'] . '-' . $today['mday'] . '-' . $today['hours'] . ':' . $today['minutes'] . ':' . $today['seconds'];
+$nowDateTime=date('Y-m-d H:i:s') . "\n";
 try {
     $sql = 'INSERT INTO orders SET 
             lastName= :lastName,
@@ -10,6 +12,7 @@ try {
             vehicle=:vehicle,
             date=:date,
             insertDate=:insertDate,
+            insertDateTime=:insertDateTime,
             insertTime=:insertTime';
     $s = $pdo->prepare($sql);
     $s->bindValue(':lastName', $_POST['lastName']);
@@ -17,6 +20,7 @@ try {
     $s->bindValue(':vehicle', $_POST['vehicle']);
     $s->bindValue(':date', $_POST['date']);
     $s->bindValue(':insertDate', $nowDate);
+    $s->bindValue(':insertDateTime', $nowDateTime);
     $s->bindValue(':insertTime', $nowTime);
     $s->execute();
 } catch (PDOException $e) {
