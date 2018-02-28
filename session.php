@@ -28,21 +28,16 @@ try {
     exit();
 }
 foreach ($s as $row) {
-$insertDateTime[] = ['insertDateTime'=>$row['insertDateTime']];
+    $insertDateTime[] = ['insertDateTime' => $row['insertDateTime']];
 }
-//$unsetTime=(strtotime($insertDateTime['0']['date'] . ' ' . $insertDateTime['0']['time'])) ;
-//$unsetTime1=(strtotime('2018-02-22' . ' ' . '15:15:14')) ;
-//echo 'Текущее время: ' . date('Y-m-d H:i:s') . "\n";
-$unsetTime= new DateTime($insertDateTime[0]['insertDateTime']);
-//print_r ($unsetTime);
-echo '______________      ';
-$unsetTime->add(new DateInterval('PT10S'));
-print_r($unsetTime);
-
-$now=date('Y-m-d H:i:s');
-var_dump($now);
-if (strtotime($now)>strtotime($unsetTime)) {
-    echo '--------------Yes!';
-    
+$dateTime = new DateTime($insertDateTime[0]['insertDateTime']);
+$dateTime->add(new DateInterval('PT5M'));
+$timeUnset = $dateTime->format('Y-m-d H:i:s');
+$now = date('Y-m-d H:i:s');
+//var_dump($now);
+//echo '_________';
+//var_dump($timeUnset);
+if ($now > $timeUnset) {
+    $_SESSION['orderIsDone'] = false;
 }
 

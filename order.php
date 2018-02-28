@@ -2,7 +2,6 @@
 
 //calendar
 $today = new \DateTimeImmutable();
-$now=$today->format('c');
 $daysInMonth = (int) $today->format('t');
 $day = new \DateTimeImmutable('first day of this month');
 $calendar = [];
@@ -42,6 +41,21 @@ $weekday = [
     'Пятница',
     'Суббота'
 ];
+//try {
+//    $sql = 'SELECT COUNT(*) FROM orders
+//WHERE email = :email AND password = :password';
+//    $s = $pdo->prepare($sql);
+//    $s->bindValue(':email', $email);
+//    $s->bindValue(':password', $password);
+//    $s->execute();
+//} catch (PDOException $e) {
+//    $error = 'Ошибка при поиске автора.';
+//    include 'error.html.php';
+//    exit();
+//}
+//$row = $s->fetch();
+//if ($row[0] > 5) {
+//}
 include 'order.html.php';
 exit();
 

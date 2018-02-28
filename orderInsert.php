@@ -1,30 +1,34 @@
 <?php
 
-$today = getdate();
-$nowDate=$today['year'] . '-' . $today['mon'] . '-' . $today['mday'];
-$nowTime=$today['hours'] . ':' . $today['minutes'] . ':' . $today['seconds'];
-//$nowDateTime=$today['year'] . '-' . $today['mon'] . '-' . $today['mday'] . '-' . $today['hours'] . ':' . $today['minutes'] . ':' . $today['seconds'];
-$nowDateTime=date('Y-m-d H:i:s') . "\n";
+$nowDateTime=date('Y-m-d H:i:s');
 try {
     $sql = 'INSERT INTO orders SET 
             lastName= :lastName,
             firstName= :firstName,
             vehicle=:vehicle,
             date=:date,
-            insertDate=:insertDate,
-            insertDateTime=:insertDateTime,
-            insertTime=:insertTime';
+            insertDateTime=:insertDateTime';
     $s = $pdo->prepare($sql);
     $s->bindValue(':lastName', $_POST['lastName']);
     $s->bindValue(':firstName', $_POST['firstName']);
     $s->bindValue(':vehicle', $_POST['vehicle']);
     $s->bindValue(':date', $_POST['date']);
-    $s->bindValue(':insertDate', $nowDate);
     $s->bindValue(':insertDateTime', $nowDateTime);
-    $s->bindValue(':insertTime', $nowTime);
     $s->execute();
 } catch (PDOException $e) {
     $error = 'Ошибка при записи заказа в БД.';
+    include 'error.html.php';
+    exit();
+}
+try {
+    $sql = 'INSERT INTO dates SET 
+            date= :date,
+            count=1';
+    $s = $pdo->prepare($sql);
+    $s->bindValue(':date', $_POST['date']);
+    $s->execute();
+} catch (PDOException $e) {
+    $error = 'Ошибка при записи даты, номера заказа в БД.';
     include 'error.html.php';
     exit();
 }
