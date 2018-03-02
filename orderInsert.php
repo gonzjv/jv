@@ -1,6 +1,6 @@
 <?php
 
-$nowDateTime=date('Y-m-d H:i:s');
+$nowDateTime = date('Y-m-d H:i:s');
 try {
     $sql = 'INSERT INTO orders SET 
             lastName= :lastName,
@@ -21,16 +21,42 @@ try {
     exit();
 }
 try {
-    $sql = 'INSERT INTO dates SET 
-            date= :date,
-            count=1';
+    $sql = 'SELECT COUNT(*) FROM dates WHERE date= :date';
     $s = $pdo->prepare($sql);
     $s->bindValue(':date', $_POST['date']);
     $s->execute();
 } catch (PDOException $e) {
-    $error = 'Ошибка при записи даты, номера заказа в БД.';
+    $error = 'Error when select count orders of the date';
     include 'error.html.php';
     exit();
+}
+$count = $s->fetch();
+if ($count[0] == 0) {
+    try {
+        $sql = 'INSERT INTO dates SET 
+            date= :date,
+            count=1';
+        $s = $pdo->prepare($sql);
+        $s->bindValue(':date', $_POST['date']);
+        $s->execute();
+    } catch (PDOException $e) {
+        $error = 'Ошибка при записи даты, номера заказа в БД.';
+        include 'error.html.php';
+        exit();
+    }
+} else {
+    try {
+        $sql = 'UPDATE dates SET 
+            count=count + 1
+            WHERE date=:date';
+        $s = $pdo->prepare($sql);
+        $s->bindValue(':date', $_POST['date']);
+        $s->execute();
+    } catch (PDOException $e) {
+        $error = 'Ошибка при записи даты, номера заказа в БД.';
+        include 'error.html.php';
+        exit();
+    }
 }
 //        try {
 //            $sql = 'SELECT COUNT(*) FROM orders WHERE 
