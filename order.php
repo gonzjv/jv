@@ -41,21 +41,21 @@ $weekday = [
     'Пятница',
     'Суббота'
 ];
-//try {
-//    $sql = 'SELECT COUNT(*) FROM orders
-//WHERE email = :email AND password = :password';
-//    $s = $pdo->prepare($sql);
-//    $s->bindValue(':email', $email);
-//    $s->bindValue(':password', $password);
-//    $s->execute();
-//} catch (PDOException $e) {
-//    $error = 'Ошибка при поиске автора.';
-//    include 'error.html.php';
-//    exit();
-//}
-//$row = $s->fetch();
-//if ($row[0] > 5) {
-//}
+try {
+    $sql = 'SELECT COUNT(*) FROM orders WHERE date= :date';
+    $s = $pdo->prepare($sql);
+    $s->bindValue(':date', $_POST['date']);
+    $s->execute();
+} catch (PDOException $e) {
+    $error = 'Error when select count orders of the date';
+    include 'error.html.php';
+    exit();
+}
+$count = $s->fetch();
+
+if ($count[0] < 5) {
+    
+}
 include 'order.html.php';
 exit();
 
