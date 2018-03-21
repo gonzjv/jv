@@ -46,7 +46,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                         <?php
 //                                            
                                        ?>
-                                            <option class="<?php htmlout($day['color']);?>" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>">
+                                            <option <?php htmlout($day['disabled']);?> class="<?php htmlout($day['color']);?>" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>">
                                                 <?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
                                             </option>
                                         <?php endforeach; ?>
