@@ -31,19 +31,16 @@ for ($i = 1; $i <= $daysInMonth; $i++) {
 
     if ($count[0] == 0) {
         $calendar[$i]['color'] = 'text-success';
+        $calendar[$i]['disabled'] = '';
     } else if ($count[0] > 0 and $count[0] < 5) {
         $calendar[$i]['color'] = 'text-warning';
+        $calendar[$i]['disabled'] = '';
     } else {
         $calendar[$i]['color'] = 'text-danger';
+        $calendar[$i]['disabled'] = 'disabled';
     }
     $day = $day->add(new \DateInterval('P1D'));
 }
-//if ($day['order'] == 'free'){
-//                                            $optionClass='text-success';
-//                                            } else if ($day['order'] == 'available'){
-//                                            $optionClass='text-warning';
-//                                            } else {
-//                                            $optionClass='text-danger';
 $month = [
     'Января',
     'Февраля',
