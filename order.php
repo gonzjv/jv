@@ -16,8 +16,34 @@ for ($i = 1; $i <= $daysInMonth; $i++) {
     if ($day->format('d') == $today->format('d')) {
         $calendar[$i]['today'] = true;
     }
+
+    try {
+        $sql = 'SELECT COUNT(*) FROM orders WHERE date= :date';
+        $s = $pdo->prepare($sql);
+        $s->bindValue(':date', ($calendar[$i]['yearSQL'] . '-' . $calendar[$i]['monthSQL'] . '-' . $calendar[$i]['monthDay']));
+        $s->execute();
+    } catch (PDOException $e) {
+        $error = 'Error when select count orders of the date';
+        include 'error.html.php';
+        exit();
+    }
+    $count = $s->fetch();
+
+    if ($count[0] == 0) {
+        $calendar[$i]['color'] = 'text-success';
+    } else if ($count[0] > 0 and $count[0] < 5) {
+        $calendar[$i]['color'] = 'text-warning';
+    } else {
+        $calendar[$i]['color'] = 'text-danger';
+    }
     $day = $day->add(new \DateInterval('P1D'));
 }
+//if ($day['order'] == 'free'){
+//                                            $optionClass='text-success';
+//                                            } else if ($day['order'] == 'available'){
+//                                            $optionClass='text-warning';
+//                                            } else {
+//                                            $optionClass='text-danger';
 $month = [
     'Января',
     'Февраля',
@@ -41,21 +67,6 @@ $weekday = [
     'Пятница',
     'Суббота'
 ];
-try {
-    $sql = 'SELECT COUNT(*) FROM orders WHERE date= :date';
-    $s = $pdo->prepare($sql);
-    $s->bindValue(':date', $_POST['date']);
-    $s->execute();
-} catch (PDOException $e) {
-    $error = 'Error when select count orders of the date';
-    include 'error.html.php';
-    exit();
-}
-$count = $s->fetch();
-
-if ($count[0] < 5) {
-    
-}
 include 'order.html.php';
 exit();
 

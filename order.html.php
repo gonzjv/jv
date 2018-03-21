@@ -43,7 +43,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                     <label for="orderDate">Выберите дату:</label>
                                     <select class="form-control" id="date" name="date">
                                         <?php foreach ($calendar as $day): ?>
-                                            <option class="text-success" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>">
+                                        <?php
+//                                            
+                                       ?>
+                                            <option class="<?php htmlout($day['color']);?>" value="<?php htmlout($day['yearSQL'] . '-' . $day['monthSQL'] . '-' . $day['monthDay']); ?>">
                                                 <?php htmlout($day['monthDay'] . ' ' . $month[$day['month']] . ', ' . $weekday[$day['weekday']]); ?>
                                             </option>
                                         <?php endforeach; ?>
