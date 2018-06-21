@@ -5,7 +5,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ремонт автомобилей</title>
+        <title>Управление автоматизации</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -13,9 +13,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
     </head>
     <body>
         <div class="wrap">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="./index.php">
-                    <img src="./img/logo_car.png" width="200" height="57" alt="">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand mx-5" href="./index.php">
+                    <!--<img src="./img/logo_car.png" width="200" height="57" alt="">-->
+                    <div class="lead text-dark">
+                        <div>Управление автоматизации</div> 
+                        <div class="mx-4">ОАО "Беларуськалий"</div> 
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,7 +31,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                         <a class="nav-item nav-link url" href="#">Отзывы</a>
                         <a class="nav-item nav-link url" href="#">Галерея</a>
                         <a class="nav-item nav-link url" href="?order">Запись</a>
-                        <a class="nav-item nav-link url" href="?shop">Магазин</a>
+                        <!--<a class="nav-item nav-link url" href="?shop">Магазин</a>-->
                     </div>  
                 </div>
             </nav>
