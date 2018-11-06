@@ -30,7 +30,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                         <a class="nav-item nav-link url" href="?news">Новости</a>
                         <a class="nav-item nav-link url" href="#">Отзывы</a>
                         <a class="nav-item nav-link url" href="#">Галерея</a>
-                        <a class="nav-item nav-link url" href="?order">Запись</a>
+                        <a class="nav-item nav-link url" href="?order">Подать заявку</a>
                         <!--<a class="nav-item nav-link url" href="?shop">Магазин</a>-->
                     </div>  
                 </div>
@@ -48,13 +48,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 <?php endif; ?>
                 <div class="row">
                     <div class="col-9">
-                        <div class="text-light mt-5">
-                            <p>Ремонтируем с 1998 года.</p>
-                            <p>Около 6000 замененных деталей подвески</p>
-                            <p>на 150 и более моделей автомобилей</p>
+                        <div class="text-light mt-4">
+                            <p>- проектирование, монтаж и наладка АСУТП с 1993г.;</p>
+                            <p>- около 2000 капитальных объектов сдано в эксплуатацию;</p>
+                            <p>- более 400 трудящихся специалистов.</p>
                             <form action="" method="post">
                                 <input type="hidden" name="action" value="order">
-                                <button type="submit" class="btn btn-light btn-lg">Записаться...</button>
+                                <button type="submit" class="btn btn-light btn-lg">Подать заявку...</button>
                             </form>
                         </div>
                     </div>
