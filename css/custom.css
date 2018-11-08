@@ -6509,7 +6509,7 @@ a.text-dark:hover, a.text-dark:focus {
 @media (min-width: 1200px) and (max-width: 1365.9px) {
   .wrap {
     min-height: 768px;
-    background-image: url(../img/wrapUa1366x768.jpg); } }
+    background-image: url(../img/wrap_ua_1366x768.jpg); } }
 @media (min-width: 1366px) {
   .wrap {
     min-height: 1080px;
