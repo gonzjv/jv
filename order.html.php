@@ -1,10 +1,10 @@
-<?php
+t<?php
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ремонт автомобилей</title>
+        <title>Управление автоматизации</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -12,9 +12,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
     </head>
     <body>
         <div class="wrap">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="./index.php">
-                    <img src="./img/logo_car.png" width="200" height="57" alt="">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand mx-5" href="./index.php">
+                    <!--<img src="./img/logo_car.png" width="200" height="57" alt="">-->
+                    <div class="lead text-dark">
+                        <div>Управление автоматизации</div> 
+                        <div class="mx-4">ОАО "Беларуськалий"</div> 
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,7 +29,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                         <a class="nav-item nav-link url" href="?news">Новости</a>
                         <a class="nav-item nav-link url" href="#">Отзывы</a>
                         <a class="nav-item nav-link url" href="#">Галерея</a>
-                        <a class="nav-item nav-link url active" href="?order">Запись</a>
+                        <a class="nav-item nav-link url active" href="?order">Подать заявку</a>
                     </div>  
                 </div>
             </nav>
@@ -38,7 +42,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                 <div class="row">
                     <div class="col-9 mt-5">
                         <form action="./index.php" method="post">
-                            <div class="form-row text-light">
+                            <div class="form-row text-dark">
                                 <div class="form-group col-md-4">
                                     <label for="orderDate">Выберите дату:</label>
                                     <select class="form-control" id="date" name="date">
@@ -61,11 +65,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                 </div>
                                 <div class="form-group col-md-3 ml-5">
                                     <label for="lastName">Данные для записи:</label>
-                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Фамилия">
+                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Организация, подразделение">
                                     <label for="firstName"></label>
-                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Имя">
+                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="ФИО сотрудника">
                                     <label for="vehicle"></label>
-                                    <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Автомобиль">
+                                    <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Описание">
+                                    <!--<textarea class="form-control" id="vehicle" rows="3" placeholder="Описание"></textarea>-->
                                 </div>
                             </div>
                             <input type="hidden" name="action" value="orderInsert">

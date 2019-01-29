@@ -49,9 +49,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 <div class="row">
                     <div class="col-9">
                         <div class="text-dark mt-4">
-                            <p>- проектирование, монтаж и наладка АСУТП с 1993г.;</p>
+                            <p>- проектирование, монтаж и наладка АСУТП;</p>
+                            <p>- 1993 год основания;</p>
                             <p>- 2520 промышленных объектов сдано в эксплуатацию;</p>
-                            <p>- более 400 увлеченно работающих специалистов.</p>
+                            <p>- 400 увлеченно работающих специалистов.</p>
                             <form action="" method="post">
                                 <input type="hidden" name="action" value="order">
                                 <button type="submit" class="btn btn-light btn-lg">Подать заявку...</button>

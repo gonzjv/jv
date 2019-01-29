@@ -16,6 +16,6 @@
     <div>
         <input type="hidden" name="action" value="login">
         <button type="submit" class="btn btn-outline-dark btn-sm">Войти</button>
-        <a class="float-right lead text-darkm url" href="?sign_up">Регистрация</a>
+        <a class="float-right lead text-dark url" href="?sign_up">Регистрация</a>
     </div>
 </form>
