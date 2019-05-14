@@ -3,7 +3,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/magicquotes.inc.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
-include_once './session.php';
+//include_once './session.php';
 
 echo $_SESSION['count'];
 if (isset($_POST['action']) and $_POST['action'] == 'order' or
