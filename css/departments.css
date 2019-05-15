@@ -6704,10 +6704,12 @@ a.text-dark:hover, a.text-dark:focus {
         background-image:	url(../img/wrap_1200x800.jpg);
     }
 }*/
-@media (min-width: 1200px) and (max-width: 1365.9px) {
-  .wrap {
-    min-height: 768px;
-    background-image: url(../img/wrap_structure_1366x768.jpg); } }
+/*@media (min-width: 1200px) and (max-width: 1365.9px){
+    .wrap {
+        min-height: 768px;
+        background-image:	url(../img/wrap_structure_1366x768.jpg);
+    }
+}*/
 /*@media (min-width: 1366px){
     .wrap {
         min-height: 1080px;
@@ -6719,4 +6721,4 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration-style: dotted;
   color: forestgreen; }
 
-/*# sourceMappingURL=structure.css.map */
+/*# sourceMappingURL=departments.css.map */

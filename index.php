@@ -31,6 +31,10 @@ if (isset($_GET['phones'])) {
     include './phones.html.php';
     exit();
 }
+if (isset($_GET['rmin'])) {
+    include './rmin.html.php';
+    exit();
+}
 //if (isset($_GET['shop'])) {
 //    include './cart.php';
 //    include './deskGames.html.php';

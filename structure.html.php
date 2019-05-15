@@ -43,14 +43,21 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 <div class="row">
                     <div class="col-7">
                         <div class="text-dark mt-3">
-                            <p><mark>Начальник УА</mark>– <i>Чечуха Олег Михайлович</i>, тел. 29 84 07</p>
+                            <p class="mb-2"><mark>Начальник УА</mark>– <i>Чечуха Олег Михайлович</i>, тел. 29 84 07</p>
                             <p class="ml-3 mb-2"><mark>Зам. начальника УА</mark> – <i>Дозорцев Николай Степанович</i>, тел. 29 88 73;</p>
                             <p class="ml-3 mb-2"><mark>Главный инженер УА</mark> - <i>Антонович Сергей Сергеевич</i>, тел. 29 85 84	;</p>
                             <p class="ml-3"><mark>Зам. начальника по метрологии УА</mark> - <i>Кальченко Денис Павлович</i>, тел. 29 87 07;</p>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-5 mt-3">
+                        <p class="mb-0"><a class="url" href="?rmin"> Цех ремонта, монтажа и наладки (РМиН)</a></p>
+                        <p class="mb-0"><a class="url" href="?static_lab"> Лаборатория по наладке стационарных установок </a></p>
+                        <p class="mb-0"><a class="url" href="?automation_lab"> Лаборатория автоматизации</a></p>
+                        <p class="mb-0"><a class="url" href="?kipia"> Цех контрольно-измерительных приборов и автоматики (КИПиА)</a></p>
+                        <p class="mb-0"><a class="url" href="?metro_lab"> Лаборатория метрологии</a></p>
+                        <p class="mb-0"><a class="url" href="?radio_lab"> Лаборатория  радиоизотопной  техники  и  радиационной  безопасности (ЛРТиРБ)</a></p>
+                        <p class="mb-0"><a class="url" href="?new_tech_department"> Отдел автоматизации и внедрения новых технологий</a></p>
                     </div>
                 </div>
             </div>
