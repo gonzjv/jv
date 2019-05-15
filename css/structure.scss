@@ -1,0 +1,43 @@
+@import "./scss/bootstrap.scss";
+
+/*@include media-breakpoint-only(xs){
+    .wrap {
+        min-height: 384px;
+        background-image:	url(../img/wrap_576x384.jpg);
+    }
+}
+@include media-breakpoint-only(sm){
+    .wrap {
+        min-height: 512px;
+        background-image:	url(../img/wrap_768x512.jpg);
+    }
+}
+@include media-breakpoint-only(md){
+    .wrap {
+        min-height: 661px;
+        background-image:	url(../img/wrap_992x661.jpg);
+    }
+}
+@include media-breakpoint-only(lg){
+    .wrap {
+        min-height: 800px;
+        background-image:	url(../img/wrap_1200x800.jpg);
+    }
+}*/
+@media (min-width: 1200px) and (max-width: 1365.9px){
+    .wrap {
+        min-height: 768px;
+        background-image:	url(../img/wrap_structure_1366x768.jpg);
+    }
+}
+/*@media (min-width: 1366px){
+    .wrap {
+        min-height: 1080px;
+        background-image:	url(../img/wrap_ua_1920x1080.jpg);
+    }
+}*/
+
+.url{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}

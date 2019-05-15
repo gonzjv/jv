@@ -5,11 +5,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Управление автоматизации</title>
+        <title>Структура УА</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--<link rel="stylesheet" href="./css/bootstrap.min.css">-->
-        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/structure.css">
     </head>
     <body>
         <div class="wrap">
@@ -28,8 +28,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav lead">
-                        <a class="nav-item nav-link active url" href="./index.php">Главная <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link url" href="?structure">Структура</a>
+                        <a class="nav-item nav-link url" href="./index.php">Главная</a>
+                        <a class="nav-item nav-link active url" href="?structure">Структура</a>
                         <a class="nav-item nav-link url" href="?phones">Телефоны</a>
                         <!--<a class="nav-item nav-link url" href="?news">Новости</a>-->
                         <!--<a class="nav-item nav-link url" href="#">Отзывы</a>-->
@@ -39,44 +39,18 @@ include_once $_SERVER['DOCUMENT_ROOT'] .
                     </div>  
                 </div>
             </nav>
-            <div class="container lead">
-                <?php if (sign_up()): ?>
-                    <div class="alert alert-success" role="alert">
-                        Отлично! Регистрация успешно завершена. Теперь Вы можете пользоваться всеми возможностями сайта!
-                    </div>
-                <?php endif; ?>
-                <?php // if ($_SESSION['orderIsDone'] == true): ?>
-                <!--                    <div class="alert alert-success" role="alert">
-                                        Поздравляем! Запись оформлена. Ждем Вас,  <?php htmlout($_SESSION['firstName'] . ', на ' . $_SESSION['vehicle'] . ' ' . $_SESSION['date']); ?>
-                                    </div>-->
-                <?php // endif; ?>
+            <div class="container">
                 <div class="row">
                     <div class="col-7">
                         <div class="text-dark mt-3">
-                            <p>Мы <em>строжайше</em> проектируем, выполняем монтаж и наладку:</p>
-                            <p class="ml-5 mb-0">-- АСУТП;</p>
-                            <p class="ml-5 mb-0">-- систем пожарной сигнализации;</p>
-                            <p class="ml-5">-- систем видеонаблюдения;</p>
-                            <p class="mb-0">- 1993 - год, когда мы все здесь собрались;</p>
-                            <p class="mb-0">- 2520 промышленных объектов на орбите (ой-ой, в эксплуатации);</p>
-                            <p>- 400 уж очень увлеченных специалистов в составе.</p>
-<!--                            <form action="" method="post">
-                                <input type="hidden" name="action" value="order">
-                                <button type="submit" class="btn btn-light btn-lg">Подать заявку...</button>
-                            </form>-->
+                            <p><mark>Начальник УА</mark>– <i>Чечуха Олег Михайлович</i>, тел. 29 84 07</p>
+                            <p class="ml-3 mb-2"><mark>Зам. начальника УА</mark> – <i>Дозорцев Николай Степанович</i>, тел. 29 88 73;</p>
+                            <p class="ml-3 mb-2"><mark>Главный инженер УА</mark> - <i>Антонович Сергей Сергеевич</i>, тел. 29 85 84	;</p>
+                            <p class="ml-3"><mark>Зам. начальника по метрологии УА</mark> - <i>Кальченко Денис Павлович</i>, тел. 29 87 07;</p>
                         </div>
                     </div>
 
                     <div class="col-3">
-                        <?php
-//                        if (userIsLoggedIn()) {
-//                            echo " Hi, " . $_SESSION['first_name'];
-//                            include './logout.inc.html.php';
-//                        } else {
-//                            include './login.html.php';
-//                        }
-//                        
-                        ?>
                     </div>
                 </div>
             </div>
