@@ -35,6 +35,30 @@ if (isset($_GET['rmin'])) {
     include './rmin.html.php';
     exit();
 }
+if (isset($_GET['static_lab'])) {
+    include './static_lab.html.php';
+    exit();
+}
+if (isset($_GET['automation_lab'])) {
+    include './automation_lab.html.php';
+    exit();
+}
+if (isset($_GET['kipia'])) {
+    include './kipia.html.php';
+    exit();
+}
+if (isset($_GET['metro_lab'])) {
+    include './metro_lab.html.php';
+    exit();
+}
+if (isset($_GET['radio_lab'])) {
+    include './radio_lab.html.php';
+    exit();
+}
+if (isset($_GET['new_tech_department'])) {
+    include './new_tech_department.html.php';
+    exit();
+}
 //if (isset($_GET['shop'])) {
 //    include './cart.php';
 //    include './deskGames.html.php';
